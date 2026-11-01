@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Admin Dashboard | REDCARE HOSPITALS Admin (Demo)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="site-header"></div>
+<nav class="portal-nav admin-bar" aria-label="Admin area"><div class="container"><ul>
+<li><a href="admin-dashboard.html" aria-current="page">Dashboard</a></li><li><a href="admin-doctors.html">Doctors</a></li><li><a href="admin-departments.html">Departments</a></li><li><a href="admin-appointments.html">Appointments</a></li><li><a href="admin-patients.html">Patients</a></li></ul></div></nav>
+<main id="main" class="portal"><div class="container">
+<div id="portal-loading" class="state"><span class="spinner" aria-hidden="true"></span> Verifying administrator access…</div>
+<div id="portal" hidden>
+<div id="admin-message" aria-live="polite"></div>
+<h1>Administrator dashboard</h1><p class="muted">Demo data only. Access is enforced by database rules.</p>
+<div class="stats stats-5" id="admin-stats"><div class="state"><span class="spinner"></span> Loading…</div></div>
+<div class="panel"><h2>Appointments by status</h2><div id="status-bars"></div></div>
+<div class="panel"><h2>Pending appointments</h2><div id="pending-list"></div><p><a class="btn btn-primary" href="admin-appointments.html">Manage appointments</a></p></div>
+</div></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin-dashboard.js"></script>
+</body>
+</html>

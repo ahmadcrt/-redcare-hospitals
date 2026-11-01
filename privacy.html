@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy | REDCARE HOSPITALS (Demo)</title>
+<meta name="description" content="REDCARE HOSPITALS is a fictional healthcare provider created as a software portfolio demonstration.">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Privacy and Demo Notice</h1><p>Please read this before using the site.</p></div></section>
+<section class="section"><div class="container" style="max-width:760px">
+<div class="notice"><strong>REDCARE HOSPITALS is a fictional portfolio demonstration.</strong> It is not a real hospital, clinic or emergency service, and it has no affiliation with any real healthcare company.</div>
+<h2 style="margin-top:1.5rem">What this demo is</h2>
+<p>A software project showing a hospital website, appointment booking, a patient portal and an administrator dashboard. Doctors, departments, addresses, phone numbers and opening hours are invented examples. No doctor shown here is a real practitioner.</p>
+<h2>No real medical care</h2>
+<p>Appointment submissions are demonstration bookings. They do not guarantee, schedule or provide real medical care. Nothing on this site is medical advice. In a real emergency, contact your local emergency number or nearest hospital. This demo does not offer emergency services.</p>
+<h2>Information the demo collects</h2>
+<ul><li>Account details: full name, email address, password (handled by Supabase Auth, never stored by this site in plain text) and an optional phone number.</li>
+<li>Booking details: the name, phone and email you enter, the chosen doctor, date and time, and an optional short reason.</li>
+<li>Contact form messages: name, email, subject and message.</li></ul>
+<p>Please do not enter real medical histories, diagnoses or other sensitive health information.</p>
+<h2>Where it is stored and who can see it</h2>
+<p>Data is stored in a Supabase database. Database rules (Row Level Security) allow each patient to see only their own profile, appointments and notifications. Demo administrators can view bookings, patient profiles and contact messages to manage the demo.</p>
+<h2>Notifications</h2>
+<p>Status updates appear inside the patient dashboard only. No email or SMS messages are sent by this demo.</p>
+<h2>Your choices</h2>
+<p>Use a throwaway email and fictional details. The project owner can delete demo accounts and data from the database on request.</p>
+<p class="hint">This page describes a demonstration project and is not legal advice.</p>
+<p><a class="btn btn-primary" href="index.html">Back to home</a></p></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
