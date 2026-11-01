@@ -1,0 +1,11 @@
+/* REDCARE HOSPITALS - admin pages */
+.admin-bar{background:var(--navy-2)}.admin-bar a{color:#dce8f5}.admin-bar a[aria-current=page]{background:var(--teal);color:#fff}
+.admin-bar ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:.5rem 0;overflow-x:auto}
+.admin-bar a{display:block;white-space:nowrap;padding:.55rem .9rem;border-radius:8px;text-decoration:none;font-weight:600}
+.bar{height:10px;border-radius:99px;background:#e6edf3;overflow:hidden;margin:.25rem 0 .75rem}.bar i{display:block;height:100%;background:var(--teal)}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 1rem}.form-grid .full{grid-column:1/-1}
+.days{display:flex;flex-wrap:wrap;gap:.5rem}.days label{display:flex;gap:.3rem;align-items:center;font-weight:400;border:1.5px solid #b7c5d3;border-radius:8px;padding:.35rem .6rem}.days input{width:18px;min-height:18px}
+.row-actions{display:flex;gap:.4rem;flex-wrap:wrap}
+dialog.wide{max-width:680px}
+.stats.stats-5{grid-template-columns:repeat(4,1fr)}
+@media (max-width:640px){.form-grid{grid-template-columns:1fr}}

@@ -1,0 +1,27 @@
+/* REDCARE HOSPITALS - responsive rules */
+@media (max-width:960px){
+  .grid-4{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .nav-toggle{display:block}
+  .nav-menu{display:none;position:absolute;left:0;right:0;top:100%;background:var(--navy-2);flex-direction:column;align-items:stretch;padding:1rem;gap:1rem;max-height:calc(100vh - 110px);overflow-y:auto;border-top:1px solid rgba(255,255,255,.15)}
+  .nav-menu.open{display:flex}
+  .nav-links{flex-direction:column}.nav-links a{padding:.75rem}
+  .nav-actions{flex-direction:column;align-items:stretch}.nav-actions .btn{width:100%}
+  .site-header{position:sticky}.nav{position:relative}
+}
+@media (max-width:640px){
+  .section{padding:2.25rem 0}
+  .grid-2,.grid-3,.grid-4{grid-template-columns:1fr}
+  .footer-grid{grid-template-columns:1fr}
+  .btn{width:100%}.nav-actions .btn,.btn-sm{width:auto}
+  input,select,textarea{font-size:16px} /* prevents iOS zoom on focus */
+}
+/* tables become stacked cards on small screens: add class "table-stack" and data-label to cells */
+.table-wrap{overflow-x:auto}
+table{border-collapse:collapse;width:100%}th,td{padding:.65rem .8rem;border-bottom:1px solid var(--line);text-align:left}
+@media (max-width:700px){
+  .table-stack thead{position:absolute;left:-9999px}
+  .table-stack tr{display:block;background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:.8rem;padding:.4rem .6rem}
+  .table-stack td{display:flex;justify-content:space-between;gap:1rem;border:0;padding:.35rem 0}
+  .table-stack td::before{content:attr(data-label);font-weight:600;color:var(--muted)}
+}

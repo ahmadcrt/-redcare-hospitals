@@ -1,0 +1,20 @@
+/* REDCARE HOSPITALS - patient portal & admin shared dashboard styles */
+.portal-nav{background:#fff;border-bottom:1px solid var(--line)}
+.portal-nav ul{display:flex;gap:.25rem;list-style:none;margin:0;padding:.5rem 0;overflow-x:auto}
+.portal-nav a{display:block;white-space:nowrap;padding:.55rem .9rem;border-radius:8px;text-decoration:none;color:var(--navy);font-weight:600}
+.portal-nav a[aria-current=page]{background:var(--navy);color:#fff}
+.portal{padding:1.75rem 0 3rem}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:1rem;margin:1.25rem 0}
+.stat{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1rem}
+.stat b{display:block;font-size:1.9rem;color:var(--navy);line-height:1.1}.stat span{color:var(--muted);font-size:.9rem}
+.panel{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.25rem;margin-bottom:1.25rem}
+.panel h2{font-size:1.25rem}
+.appt{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;padding:.9rem 0;border-bottom:1px solid var(--line);align-items:center}
+.appt:last-child{border-bottom:0}.appt h3{font-size:1rem;margin:0}.appt p{margin:0;color:var(--muted);font-size:.9rem}
+.toolbar{display:flex;gap:1rem;flex-wrap:wrap;align-items:end;margin-bottom:1rem}.toolbar .field{margin:0;min-width:200px}
+.notif{padding:.7rem 0;border-bottom:1px solid var(--line)}.notif:last-child{border-bottom:0}.notif.unread{font-weight:600}
+.notif small{display:block;color:var(--muted);font-weight:400}
+.sys{font-size:.72rem;background:#e0f2fe;color:#0b4a6f;border-radius:99px;padding:.05rem .5rem;margin-right:.4rem}
+@media (max-width:900px){.stats{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.appt{grid-template-columns:1fr}}
+.dl{display:grid;grid-template-columns:max-content 1fr;gap:.3rem 1rem}.dl dt{font-weight:600}.dl dd{margin:0}

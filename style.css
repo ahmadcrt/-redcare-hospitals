@@ -1,0 +1,96 @@
+/* REDCARE HOSPITALS - Designed & Developed by Ahmad */
+:root{--navy:#0b2545;--navy-2:#13315c;--teal:#0f9d8a;--teal-d:#0b7c6d;--bg:#f4f8fb;--card:#fff;--text:#1c2b3a;--muted:#5b6b7b;--line:#dbe4ec;--danger:#b42318;--warn:#b54708;--ok:#067647;--radius:12px;--shadow:0 2px 10px rgba(11,37,69,.08)}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.6;color:var(--text);background:var(--bg);overflow-x:hidden}
+img,svg{max-width:100%;height:auto}
+h1,h2,h3{color:var(--navy);line-height:1.25;margin:0 0 .6rem}
+h1{font-size:clamp(1.8rem,5vw,2.8rem)}h2{font-size:clamp(1.4rem,3.5vw,2rem)}h3{font-size:1.15rem}
+p{margin:0 0 1rem}a{color:var(--teal-d)}
+:focus-visible{outline:3px solid #f5a524;outline-offset:2px;border-radius:4px}
+.container{width:100%;max-width:1160px;margin:0 auto;padding:0 1rem}
+.section{padding:3rem 0}.section-alt{background:#fff}
+.section-head{max-width:640px;margin-bottom:1.75rem}.muted{color:var(--muted)}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.skip-link{position:absolute;left:-999px;top:0;background:#fff;padding:.6rem 1rem;z-index:100}.skip-link:focus{left:0}
+[hidden]{display:none!important}
+
+.demo-banner{background:#fff4d6;color:#5c4400;font-size:.85rem;text-align:center;padding:.4rem 1rem}
+.demo-banner a{color:#5c4400;font-weight:600}
+.site-header{background:var(--navy);position:sticky;top:0;z-index:50}
+.nav{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:64px}
+.brand{display:flex;align-items:center;gap:.6rem;color:#fff;text-decoration:none;font-weight:800;letter-spacing:.04em}
+.brand small{display:block;font-size:.62rem;font-weight:600;letter-spacing:.18em;color:#9fd8cf}
+.brand-mark{display:grid;place-items:center;width:36px;height:36px;border-radius:9px;background:var(--teal);color:#fff;font-size:1.5rem;line-height:1}
+.nav-menu{display:flex;align-items:center;gap:1.25rem}
+.nav-links{display:flex;gap:.25rem;list-style:none;margin:0;padding:0}
+.nav-links a{display:block;color:#dce8f5;text-decoration:none;padding:.5rem .7rem;border-radius:8px;font-size:.95rem}
+.nav-links a:hover,.nav-links a[aria-current=page]{background:rgba(255,255,255,.12);color:#fff}
+.nav-actions{display:flex;gap:.5rem;align-items:center}
+.nav-toggle{display:none;background:none;border:0;padding:.6rem;cursor:pointer}
+.nav-toggle span{display:block;width:24px;height:2px;background:#fff;margin:5px 0}
+
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.6rem 1.3rem;border-radius:10px;border:2px solid transparent;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:background .15s}
+.btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-d)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}.btn-outline:hover{background:rgba(255,255,255,.12)}
+.section .btn-outline,.card .btn-outline,.auth-card .btn-outline{color:var(--navy);border-color:var(--navy)}
+.btn-danger{background:var(--danger);color:#fff}.btn-sm{min-height:38px;padding:.35rem .9rem;font-size:.9rem}
+.btn:disabled{opacity:.55;cursor:not-allowed}
+
+.grid{display:grid;gap:1.25rem}.grid-2{grid-template-columns:repeat(2,1fr)}.grid-3{grid-template-columns:repeat(3,1fr)}.grid-4{grid-template-columns:repeat(4,1fr)}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:1.25rem;box-shadow:var(--shadow)}
+.card h3{margin-bottom:.35rem}.tag{display:inline-block;background:#e3f5f2;color:var(--teal-d);font-size:.78rem;font-weight:600;padding:.15rem .6rem;border-radius:99px}
+
+label{display:block;font-weight:600;margin-bottom:.3rem;font-size:.95rem}
+input,select,textarea{width:100%;min-height:46px;padding:.6rem .8rem;border:1.5px solid #b7c5d3;border-radius:10px;font:inherit;background:#fff;color:var(--text)}
+textarea{min-height:110px;resize:vertical}
+input:focus,select:focus,textarea:focus{border-color:var(--teal)}
+.field{margin-bottom:1rem}.hint{font-size:.82rem;color:var(--muted);margin-top:.25rem}
+.req{color:var(--danger)}
+
+.alert{padding:.8rem 1rem;border-radius:10px;margin-bottom:1rem;font-size:.95rem}
+.alert-error{background:#fee4e2;color:#7a1710;border:1px solid #fda29b}
+.alert-success{background:#dcfae6;color:#054f31;border:1px solid #75e0a7}
+.alert-info{background:#e0f2fe;color:#0b4a6f;border:1px solid #7cd4fd}
+.state{text-align:center;padding:2rem 1rem;color:var(--muted)}.state-error{color:var(--danger)}
+.spinner{display:inline-block;width:18px;height:18px;border:3px solid var(--line);border-top-color:var(--teal);border-radius:50%;animation:spin .8s linear infinite;vertical-align:middle}
+@keyframes spin{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+
+.badge{display:inline-block;padding:.15rem .65rem;border-radius:99px;font-size:.78rem;font-weight:700}
+.badge-pending{background:#fef0c7;color:#7a2e0e}.badge-confirmed{background:#d1e9ff;color:#175cd3}
+.badge-completed{background:#dcfae6;color:#067647}.badge-cancelled{background:#eaecf0;color:#475467}
+
+.site-footer{background:var(--navy);color:#c9d8e8;padding-top:2.5rem;margin-top:0}
+.site-footer a{color:#c9d8e8}.site-footer ul{list-style:none;margin:0;padding:0}.site-footer li{margin-bottom:.4rem}
+.footer-grid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:1.5rem}
+.footer-h{color:#fff;font-size:1rem}.brand-light{margin-bottom:.6rem}
+.footer-bottom{border-top:1px solid rgba(255,255,255,.15);margin-top:2rem;padding-top:1rem;padding-bottom:1.5rem;font-size:.85rem}
+
+/* ---- public pages ---- */
+.hero{background:linear-gradient(135deg,var(--navy),var(--navy-2));color:#dce8f5;padding:3.5rem 0}
+.hero h1{color:#fff}.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:2rem;align-items:center}
+.hero-cta{display:flex;gap:.75rem;flex-wrap:wrap;margin-top:1.25rem}
+.page-hero{background:var(--navy);color:#dce8f5;padding:2.25rem 0}.page-hero h1{color:#fff;margin:0 0 .4rem}.page-hero p{margin:0;max-width:640px}
+.icon{display:grid;place-items:center;width:44px;height:44px;border-radius:10px;background:#e3f5f2;color:var(--teal-d);font-weight:800;margin-bottom:.7rem}
+.avatar{display:grid;place-items:center;width:64px;height:64px;border-radius:50%;background:var(--navy-2);color:#fff;font-weight:700;font-size:1.2rem;margin-bottom:.7rem}
+.card-list{margin:.5rem 0 1rem;padding-left:1.1rem}.card-actions{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:.75rem}
+.filters{display:grid;grid-template-columns:2fr 1fr;gap:1rem;margin-bottom:1.5rem}
+dialog{border:0;border-radius:16px;padding:1.5rem;max-width:520px;width:calc(100% - 2rem);box-shadow:0 10px 40px rgba(0,0,0,.3)}
+dialog::backdrop{background:rgba(11,37,69,.6)}
+.notice{background:#fff4d6;border:1px solid #f0d48a;color:#5c4400;border-radius:10px;padding:.8rem 1rem;font-size:.9rem}
+.info-row{display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem}
+fieldset{border:1px solid var(--line);border-radius:12px;padding:1rem;margin:0 0 1.25rem;background:#fff}
+legend{font-weight:700;color:var(--navy);padding:0 .4rem}
+.slots{display:flex;flex-wrap:wrap;gap:.5rem}
+.slot input{position:absolute;opacity:0;width:1px;height:1px}
+.slot span{display:inline-block;min-width:92px;text-align:center;padding:.55rem .8rem;border:1.5px solid #b7c5d3;border-radius:10px;cursor:pointer;background:#fff}
+.slot input:checked+span{background:var(--teal);border-color:var(--teal);color:#fff}
+.slot input:focus-visible+span{outline:3px solid #f5a524;outline-offset:2px}
+.slot input:disabled+span{opacity:.4;cursor:not-allowed;text-decoration:line-through}
+.review dl{display:grid;grid-template-columns:max-content 1fr;gap:.4rem 1rem;margin:0 0 1rem}.review dt{font-weight:600}.review dd{margin:0}
+.ref{font-size:1.6rem;font-weight:800;letter-spacing:.05em;color:var(--navy)}
+.check{display:flex;gap:.6rem;align-items:flex-start}.check input{width:22px;min-height:22px;margin-top:.2rem}.check label{font-weight:400}
+.hp{position:absolute;left:-9999px}
+@media (max-width:960px){.hero-grid{grid-template-columns:1fr}.info-row{grid-template-columns:1fr}}
+@media (max-width:640px){.filters{grid-template-columns:1fr}.hero{padding:2.25rem 0}}
