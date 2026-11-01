@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Doctors | REDCARE HOSPITALS Admin (Demo)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="site-header"></div>
+<nav class="portal-nav admin-bar" aria-label="Admin area"><div class="container"><ul>
+<li><a href="admin-dashboard.html">Dashboard</a></li><li><a href="admin-doctors.html" aria-current="page">Doctors</a></li><li><a href="admin-departments.html">Departments</a></li><li><a href="admin-appointments.html">Appointments</a></li><li><a href="admin-patients.html">Patients</a></li></ul></div></nav>
+<main id="main" class="portal"><div class="container">
+<div id="portal-loading" class="state"><span class="spinner" aria-hidden="true"></span> Verifying administrator access…</div>
+<div id="portal" hidden>
+<div id="admin-message" aria-live="polite"></div>
+<h1>Doctors</h1>
+<div class="toolbar"><div class="field"><label for="search">Search</label><input id="search" type="search" placeholder="Name or specialty"></div>
+<div class="field"><label for="filter-dept">Department</label><select id="filter-dept"></select></div><button class="btn btn-primary" type="button" id="add-doc">Add doctor</button></div>
+<div class="panel" id="doc-wrap"></div>
+<dialog id="doc-dialog" class="wide" aria-labelledby="doc-title"><h2 id="doc-title">Doctor</h2><div id="doc-form-msg" aria-live="polite"></div>
+<form id="doc-form" novalidate><div class="form-grid">
+<div class="field"><label for="d-name">Full name *</label><input id="d-name" name="full_name" maxlength="100"></div>
+<div class="field"><label for="d-spec">Specialty *</label><input id="d-spec" name="specialty" maxlength="100"></div>
+<div class="field"><label for="d-dept">Department *</label><select id="d-dept" name="department_id"></select></div>
+<div class="field"><label for="d-years">Years of experience</label><input id="d-years" name="years_experience" type="number" min="0" max="60"></div>
+<div class="field full"><label for="d-bio">Biography</label><textarea id="d-bio" name="bio"></textarea></div>
+<div class="field full"><span><strong>Available days *</strong></span><div class="days"><label><input type="checkbox" name="days" value="0">Sun</label><label><input type="checkbox" name="days" value="1">Mon</label><label><input type="checkbox" name="days" value="2">Tue</label><label><input type="checkbox" name="days" value="3">Wed</label><label><input type="checkbox" name="days" value="4">Thu</label><label><input type="checkbox" name="days" value="5">Fri</label><label><input type="checkbox" name="days" value="6">Sat</label></div></div>
+<div class="field"><label for="d-start">Day starts</label><input id="d-start" name="slot_start" type="time"></div>
+<div class="field"><label for="d-end">Day ends</label><input id="d-end" name="slot_end" type="time"></div>
+<div class="field"><label for="d-min">Slot length (minutes)</label><input id="d-min" name="slot_minutes" type="number" min="10" max="120" step="5"></div>
+<div class="field check"><input id="d-active" name="is_active" type="checkbox"><label for="d-active">Active (visible and bookable)</label></div></div>
+<div class="card-actions"><button class="btn btn-primary" type="submit">Save doctor</button><button class="btn btn-outline" type="button" id="doc-cancel">Cancel</button></div></form></dialog>
+</div></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin-doctors.js"></script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Manage Departments | REDCARE HOSPITALS Admin (Demo)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+<link rel="stylesheet" href="css/admin.css">
+</head>
+<body>
+<div id="site-header"></div>
+<nav class="portal-nav admin-bar" aria-label="Admin area"><div class="container"><ul>
+<li><a href="admin-dashboard.html">Dashboard</a></li><li><a href="admin-doctors.html">Doctors</a></li><li><a href="admin-departments.html" aria-current="page">Departments</a></li><li><a href="admin-appointments.html">Appointments</a></li><li><a href="admin-patients.html">Patients</a></li></ul></div></nav>
+<main id="main" class="portal"><div class="container">
+<div id="portal-loading" class="state"><span class="spinner" aria-hidden="true"></span> Verifying administrator access…</div>
+<div id="portal" hidden>
+<div id="admin-message" aria-live="polite"></div>
+<h1>Departments</h1>
+<p class="muted">Departments are never deleted, so no doctor or appointment is orphaned. Deactivate instead.</p>
+<div class="toolbar"><button class="btn btn-primary" type="button" id="add-dept">Add department</button></div>
+<div class="panel" id="dept-body-wrap"></div>
+<dialog id="dept-dialog" class="wide" aria-labelledby="dept-title"><h2 id="dept-title">Department</h2><div id="dept-form-msg" aria-live="polite"></div>
+<form id="dept-form" novalidate>
+<div class="field"><label for="n-name">Name *</label><input id="n-name" name="name" maxlength="80"></div>
+<div class="field"><label for="n-slug">Slug *</label><input id="n-slug" name="slug"><p class="hint">Lowercase letters, numbers and hyphens.</p></div>
+<div class="field"><label for="n-desc">Description *</label><textarea id="n-desc" name="description"></textarea></div>
+<div class="field"><label for="n-svc">Services (one per line)</label><textarea id="n-svc" name="services"></textarea></div>
+<div class="field check"><input id="n-active" name="is_active" type="checkbox"><label for="n-active">Active</label></div>
+<div class="card-actions"><button class="btn btn-primary" type="submit">Save department</button><button class="btn btn-outline" type="button" id="dept-cancel">Cancel</button></div></form></dialog>
+</div></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin-departments.js"></script>
+</body>
+</html>

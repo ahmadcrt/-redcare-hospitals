@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Contact | REDCARE HOSPITALS (Demo)</title>
+<meta name="description" content="REDCARE HOSPITALS is a fictional healthcare provider created as a software portfolio demonstration.">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Contact Us</h1><p>Send a demonstration message. It is saved to the demo database only.</p></div></section>
+<section class="section"><div class="container grid grid-2"><div class="card"><h2>Send a message</h2>
+<div id="contact-message" aria-live="polite"></div>
+<form id="contact-form" novalidate>
+<div class="hp" aria-hidden="true"><label for="c-web">Website</label><input id="c-web" name="website" tabindex="-1" autocomplete="off"></div>
+<div class="field"><label for="c-name">Name <span class="req">*</span></label><input id="c-name" name="name" autocomplete="name" required></div>
+<div class="field"><label for="c-email">Email <span class="req">*</span></label><input id="c-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="c-subject">Subject <span class="req">*</span></label><input id="c-subject" name="subject" required maxlength="150"></div>
+<div class="field"><label for="c-msg">Message <span class="req">*</span></label><textarea id="c-msg" name="message" required maxlength="2000"></textarea><p class="hint">Do not include real medical details.</p></div>
+<button class="btn btn-primary" type="submit">Send message</button></form></div>
+<div><div class="card"><h3>Contact details (fictional)</h3><p>12 Demo Avenue, Example District, Lagos (fictional address)<br>Phone: +234 000 000 0000 (not real)<br>Email: demo@redcare-hospitals.example</p></div>
+<div class="card" style="margin-top:1rem"><h3>Opening hours (demo)</h3><p>Mon to Fri: 8:00 AM to 5:00 PM<br>Saturday: 9:00 AM to 1:00 PM<br>Sunday: Closed</p></div>
+<div class="card" style="margin-top:1rem"><h3>Location</h3><p>This address is invented, so no real map is shown.</p></div></div></div></section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Profile | REDCARE HOSPITALS (Demo)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<div id="site-header"></div>
+<nav class="portal-nav" aria-label="Patient area"><div class="container"><ul>
+<li><a href="patient-dashboard.html">Dashboard</a></li><li><a href="patient-appointments.html">My Appointments</a></li><li><a href="patient-profile.html" aria-current="page">Profile</a></li><li><a href="appointments.html">Book New</a></li></ul></div></nav>
+<main id="main" class="portal"><div class="container">
+<div id="portal-loading" class="state"><span class="spinner" aria-hidden="true"></span> Checking your session…</div>
+<div id="portal" hidden>
+<h1>My profile</h1>
+<div class="panel" style="max-width:560px"><p class="muted">Member since <span id="member-since"></span></p>
+<div id="profile-message" aria-live="polite"></div>
+<form id="profile-form" novalidate>
+<div class="field"><label for="p-name">Display name <span class="req">*</span></label><input id="p-name" name="full_name" autocomplete="name" required maxlength="100"></div>
+<div class="field"><label for="p-email">Email</label><input id="p-email" name="email" type="email" readonly aria-describedby="p-email-h"><p class="hint" id="p-email-h">Email cannot be changed here.</p></div>
+<div class="field"><label for="p-phone">Phone (optional)</label><input id="p-phone" name="phone" type="tel" autocomplete="tel"></div>
+<button class="btn btn-primary" type="submit">Save changes</button></form></div>
+</div></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/patient-profile.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Login | REDCARE HOSPITALS (Demo)</title>
+<meta name="description" content="REDCARE HOSPITALS is a fictional healthcare portfolio demonstration.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<div class="auth-wrap" data-auth>
+<div class="auth-card">
+<div id="auth-message" aria-live="polite"></div>
+<section data-panel="login">
+<h1>Patient login</h1>
+<form id="login-form" novalidate>
+<div class="field"><label for="l-email">Email <span class="req">*</span></label><input id="l-email" name="email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="l-pw">Password <span class="req">*</span></label><input id="l-pw" name="password" type="password" autocomplete="current-password" required></div>
+<button class="btn btn-primary" type="submit">Log in</button>
+</form>
+<div class="auth-links"><a href="#" data-show="forgot">Forgot password?</a><a href="register.html">Create an account</a></div>
+</section>
+<section data-panel="forgot" hidden>
+<h1>Reset password</h1>
+<p class="muted">Enter your email and we will send a reset link.</p>
+<form id="forgot-form" novalidate>
+<div class="field"><label for="f-email">Email <span class="req">*</span></label><input id="f-email" name="email" type="email" autocomplete="email" required></div>
+<button class="btn btn-primary" type="submit">Send reset link</button>
+</form>
+<div class="auth-links"><a href="#" data-show="login">Back to login</a></div>
+</section>
+<section data-panel="reset" hidden>
+<h1>Choose a new password</h1>
+<form id="reset-form" novalidate>
+<div class="field"><label for="r-pw">New password <span class="req">*</span></label><input id="r-pw" name="password" type="password" autocomplete="new-password" required><p class="hint">At least 8 characters, with a letter and a number.</p></div>
+<div class="field"><label for="r-cf">Confirm password <span class="req">*</span></label><input id="r-cf" name="confirm" type="password" autocomplete="new-password" required></div>
+<button class="btn btn-primary" type="submit">Update password</button>
+</form>
+</section>
+</div></div>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

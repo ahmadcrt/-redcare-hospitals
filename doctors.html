@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Doctors | REDCARE HOSPITALS (Demo)</title>
+<meta name="description" content="REDCARE HOSPITALS is a fictional healthcare provider created as a software portfolio demonstration.">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Our Doctors</h1><p>Fictional example profiles. They are not real practitioners.</p></div></section>
+<section class="section"><div class="container">
+<div class="filters"><div><label for="filter-search">Search by name or specialty</label><input id="filter-search" type="search" placeholder="e.g. Cardiologist"></div>
+<div><label for="filter-dept">Department</label><select id="filter-dept"><option value="">All departments</option></select></div></div>
+<p class="muted" id="result-count" aria-live="polite"></p>
+<div class="grid grid-3" id="doctor-list"></div></div></section>
+<dialog id="doc-dialog" aria-labelledby="doc-title"><div id="doc-body"></div></dialog>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/public.js"></script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Patient Dashboard | REDCARE HOSPITALS (Demo)</title>
+<meta name="robots" content="noindex">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body>
+<div id="site-header"></div>
+<nav class="portal-nav" aria-label="Patient area"><div class="container"><ul>
+<li><a href="patient-dashboard.html" aria-current="page">Dashboard</a></li><li><a href="patient-appointments.html">My Appointments</a></li><li><a href="patient-profile.html">Profile</a></li><li><a href="appointments.html">Book New</a></li></ul></div></nav>
+<main id="main" class="portal"><div class="container">
+<div id="portal-loading" class="state"><span class="spinner" aria-hidden="true"></span> Checking your session…</div>
+<div id="portal" hidden>
+<h1>Welcome, <span id="welcome-name"></span></h1>
+<p class="muted">Your demo patient dashboard. Nothing here is real medical information.</p>
+<div id="portal-message" aria-live="polite"></div>
+<div class="stats" id="stats"><div class="stat"><b id="stat-upcoming">0</b><span>Upcoming</span></div><div class="stat"><b id="stat-pending">0</b><span>Pending</span></div><div class="stat"><b id="stat-completed">0</b><span>Completed</span></div><div class="stat"><b id="stat-cancelled">0</b><span>Cancelled</span></div></div>
+<div class="panel"><h2>Upcoming appointments</h2><div id="upcoming-list"></div><p><a class="btn btn-primary" href="appointments.html">Request a new appointment</a> <a class="btn btn-outline" href="patient-appointments.html">View all</a></p></div>
+<div class="panel"><h2>Notifications</h2><p class="hint"><span class="sys">System</span> marks messages generated automatically when an appointment status changes. No emails or SMS are sent in this demo.</p><div id="notif-list"></div><button class="btn btn-outline btn-sm" type="button" id="mark-read" hidden>Mark all as read</button></div>
+<dialog id="appt-dialog" aria-labelledby="appt-title"><div id="appt-body"></div></dialog>
+</div></div></main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/patient-dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Book Appointment | REDCARE HOSPITALS (Demo)</title>
+<meta name="description" content="REDCARE HOSPITALS is a fictional healthcare provider created as a software portfolio demonstration.">
+<link rel="icon" href="assets/images/hero.svg" type="image/svg+xml">
+<link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+<div id="site-header"></div>
+<main id="main">
+<section class="page-hero"><div class="container"><h1>Book an Appointment</h1><p>Demonstration booking. It does not guarantee real medical care.</p></div></section>
+<section class="section"><div class="container" style="max-width:760px">
+<div id="booking-message" aria-live="polite"></div>
+<div id="auth-gate" class="card" hidden><h2>Please log in to book</h2><p>Booking requires a free demo patient account so you can track your appointments.</p>
+<div class="card-actions"><a class="btn btn-primary" href="login.html?next=appointments.html">Log in</a><a class="btn btn-outline" href="register.html">Create account</a></div></div>
+<form id="booking-form" novalidate hidden>
+<fieldset><legend>1. Choose your appointment</legend>
+<div class="field"><label for="b-dept">Department <span class="req">*</span></label><select id="b-dept" name="department" required></select></div>
+<div class="field"><label for="b-doc">Doctor <span class="req">*</span></label><select id="b-doc" name="doctor" required disabled></select></div>
+<div class="field"><label for="b-date">Date <span class="req">*</span></label><input id="b-date" name="date" type="date" required></div>
+<div class="field"><span id="slots-label" class="label-like"><strong>Available times <span class="req">*</span></strong></span><div id="slots" class="slots" role="radiogroup" aria-labelledby="slots-label"></div></div></fieldset>
+<fieldset><legend>2. Your details</legend>
+<div class="field"><label for="b-name">Full name <span class="req">*</span></label><input id="b-name" name="patient_name" autocomplete="name" required></div>
+<div class="field"><label for="b-phone">Phone <span class="req">*</span></label><input id="b-phone" name="patient_phone" type="tel" autocomplete="tel" required></div>
+<div class="field"><label for="b-email">Email <span class="req">*</span></label><input id="b-email" name="patient_email" type="email" autocomplete="email" required></div>
+<div class="field"><label for="b-reason">Reason (optional)</label><textarea id="b-reason" name="reason" maxlength="300"></textarea><p class="hint">Keep it short. Do not enter sensitive medical details.</p></div>
+<div class="field check"><input id="b-consent" name="consent" type="checkbox" required><label for="b-consent">I understand this is a demonstration booking and does not guarantee real medical care.</label></div></fieldset>
+<button class="btn btn-primary" type="submit">Review booking</button></form>
+<div id="review" class="card review" hidden><h2>Review your booking</h2><div id="review-body"></div><div class="card-actions"><button class="btn btn-outline" id="edit-btn" type="button">Edit</button><button class="btn btn-primary" id="confirm-btn" type="button">Confirm booking</button></div></div>
+<div id="result" class="card" hidden><h2>Booking received</h2><p>Your demo reference number:</p><p class="ref" id="ref"></p><p>Status: <span class="badge badge-pending">Pending</span>. An administrator must confirm it. No email or SMS is sent in this demo.</p>
+<div class="card-actions"><a class="btn btn-primary" href="patient-appointments.html">View my appointments</a><a class="btn btn-outline" href="index.html">Back to home</a></div></div>
+</div></section>
+</main>
+<div id="site-footer"></div>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js"></script>
+<script src="js/config.js"></script>
+<script src="js/supabase.js"></script>
+<script src="js/auth.js"></script>
+<script src="js/main.js"></script>
+<script src="js/appointments.js"></script>
+</body>
+</html>
