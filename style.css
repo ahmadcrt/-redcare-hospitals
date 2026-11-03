@@ -32,8 +32,9 @@ p{margin:0 0 1rem}a{color:var(--teal-d)}
 
 .btn{display:inline-flex;align-items:center;justify-content:center;gap:.4rem;min-height:44px;padding:.6rem 1.3rem;border-radius:10px;border:2px solid transparent;font:inherit;font-weight:600;text-decoration:none;cursor:pointer;transition:background .15s}
 .btn-primary{background:var(--teal);color:#fff}.btn-primary:hover{background:var(--teal-d)}
-.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}.btn-outline:hover{background:rgba(255,255,255,.12)}
-.section .btn-outline,.card .btn-outline,.auth-card .btn-outline{color:var(--navy);border-color:var(--navy)}
+.btn-outline{background:transparent;color:var(--navy);border-color:var(--navy)}.btn-outline:hover{background:#e8eef4}
+.site-header .btn-outline,.hero .btn-outline,.nav-menu .btn-outline{color:#fff;border-color:rgba(255,255,255,.55)}.site-header .btn-outline:hover,.hero .btn-outline:hover,.nav-menu .btn-outline:hover{background:rgba(255,255,255,.12)}
+
 .btn-danger{background:var(--danger);color:#fff}.btn-sm{min-height:38px;padding:.35rem .9rem;font-size:.9rem}
 .btn:disabled{opacity:.55;cursor:not-allowed}
 

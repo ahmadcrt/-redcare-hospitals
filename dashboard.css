@@ -11,7 +11,7 @@
 .panel h2{font-size:1.25rem}
 .appt{display:grid;grid-template-columns:1fr auto;gap:.5rem 1rem;padding:.9rem 0;border-bottom:1px solid var(--line);align-items:center}
 .appt:last-child{border-bottom:0}.appt h3{font-size:1rem;margin:0}.appt p{margin:0;color:var(--muted);font-size:.9rem}
-.toolbar{display:flex;gap:1rem;flex-wrap:wrap;align-items:end;margin-bottom:1rem}.toolbar .field{margin:0;min-width:200px}
+.toolbar{display:flex;gap:1rem;flex-wrap:wrap;align-items:end;margin-bottom:1rem}.toolbar .field{margin:0;flex:1 1 150px;min-width:0}.toolbar input[type=date]{min-width:0;max-width:100%;-webkit-appearance:none;appearance:none}
 .notif{padding:.7rem 0;border-bottom:1px solid var(--line)}.notif:last-child{border-bottom:0}.notif.unread{font-weight:600}
 .notif small{display:block;color:var(--muted);font-weight:400}
 .sys{font-size:.72rem;background:#e0f2fe;color:#0b4a6f;border-radius:99px;padding:.05rem .5rem;margin-right:.4rem}
